@@ -1,20 +1,50 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "/",
+    "importHelpers": true,
+    "declaration": false,
     "esModuleInterop": true,
-    "module": "esnext",
+    "outDir": "./dist/",
+    "rootDir": ".",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2018",
     "jsx": "preserve",
-    "incremental": true
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "types": [
+      "node",
+      "jest",
+      "@testing-library/jest-dom"
+    ],
+    "paths": {
+      "statics/*": [
+        "src/statics/*"
+      ]
+    },
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "isolatedModules": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
